@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter_web_project/util.dart';
 
 
@@ -15,23 +14,7 @@ class _ContactScreenState extends State<ContactScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _messageController = TextEditingController();
 
-  Future<void> _submitForm() async {
-    if (_formKey.currentState!.validate()) {
-      await FirebaseFirestore.instance.collection('contacts').add({
-        'name': _nameController.text,
-        'email': _emailController.text,
-        'message': _messageController.text,
-        'timestamp': FieldValue.serverTimestamp(),
-      });
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Message sent successfully!')),
-      );
-      _nameController.clear();
-      _emailController.clear();
-      _messageController.clear();
-    }
-  }
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,11 +73,7 @@ class _ContactScreenState extends State<ContactScreen> {
             validator: (value) => value!.isEmpty ? 'Required' : null,
           ),
           SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: _submitForm,
-            child: Text('Send Message'),
-          ),
-        ],
+        ]
       ),
     );
   }

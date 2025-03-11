@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter_web_project/contact.dart';
 import 'package:flutter_web_project/home_screen.dart';
 import 'package:flutter_web_project/portpolio.dart';
@@ -8,7 +8,7 @@ import 'package:flutter_web_project/service_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   runApp(FlumakeApp());
 }
 
