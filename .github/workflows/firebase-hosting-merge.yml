@@ -18,4 +18,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KARTHIK_WEB }}
           channelId: live
           projectId: karthik-web
-          entryPoint: 'web/firebase.json'
+          entryPoint: 'C:\Users\91936\Desktop\flutter_web_project\web/firebase.json'
