@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Innovative Tech Solutions',
+                        'Flumake Infotech ',
                         style: kHeroTitleStyle,
                         textAlign: TextAlign.center,
                       ),
